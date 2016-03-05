@@ -15,7 +15,13 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+        // return \View::make('employees.index');
+
+        //EMPLOYEE LIST==========
+        $employees = \DB::table('employees')
+            ->get();
+
+        return \View::make('employees.index', compact('employees'));
     }
 
     /**

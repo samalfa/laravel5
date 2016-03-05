@@ -15,6 +15,7 @@ class EmployeeApiController extends Controller
      */
     public function index()
     {
+        // 1=========
         // $employees = \DB::table('employees')
         //     ->get();
 
@@ -36,7 +37,7 @@ class EmployeeApiController extends Controller
             $employees = \DB::table('employees')
                 ->get();
         }
-        
+
         return \Response::json($employees);
     }
 
